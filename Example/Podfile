@@ -1,0 +1,6 @@
+use_frameworks!
+target 'SpitcastSwift_Tests' do
+  pod 'SpitcastSwift', :path => '../'
+  
+  
+end
