@@ -13,14 +13,14 @@
 
 /* Begin PBXFileReference section */
 		13B4649DDA71DB2F4FCEA54A /* Pods-SpitcastSwift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpitcastSwift_Tests.release.xcconfig"; path = "Pods/Target Support Files/Pods-SpitcastSwift_Tests/Pods-SpitcastSwift_Tests.release.xcconfig"; sourceTree = "<group>"; };
-		223711148633C6DB81EC7E96 /* SpitcastSwift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; name = SpitcastSwift.podspec; path = ../SpitcastSwift.podspec; sourceTree = "<group>"; };
-		5F8A31498BAB3DD70A772C3C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
+		223711148633C6DB81EC7E96 /* SpitcastSwift.podspec */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = SpitcastSwift.podspec; path = ../SpitcastSwift.podspec; sourceTree = "<group>"; xcLanguageSpecificationIdentifier = xcode.lang.ruby; };
+		5F8A31498BAB3DD70A772C3C /* LICENSE */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text; name = LICENSE; path = ../LICENSE; sourceTree = "<group>"; };
 		607FACE51AFB9204008FA782 /* SpitcastSwift_Tests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = SpitcastSwift_Tests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		607FACEA1AFB9204008FA782 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		607FACEB1AFB9204008FA782 /* Tests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tests.swift; sourceTree = "<group>"; };
 		6AA95BCEF657E69365A4F181 /* Pods_SpitcastSwift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpitcastSwift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		9B49B4F7167C1528990F19A8 /* Pods-SpitcastSwift_Tests.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SpitcastSwift_Tests.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SpitcastSwift_Tests/Pods-SpitcastSwift_Tests.debug.xcconfig"; sourceTree = "<group>"; };
-		D73947EAFEE3C7C1BC8AF07F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; name = README.md; path = ../README.md; sourceTree = "<group>"; };
+		D73947EAFEE3C7C1BC8AF07F /* README.md */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = net.daringfireball.markdown; name = README.md; path = ../README.md; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -131,12 +131,9 @@
 				LastUpgradeCheck = 0830;
 				ORGANIZATIONNAME = CocoaPods;
 				TargetAttributes = {
-					607FACCF1AFB9204008FA782 = {
-						CreatedOnToolsVersion = 6.3.1;
-						LastSwiftMigration = 0900;
-					};
 					607FACE41AFB9204008FA782 = {
 						CreatedOnToolsVersion = 6.3.1;
+						DevelopmentTeam = C8DMG6E92N;
 						LastSwiftMigration = 0900;
 						TestTargetID = 607FACCF1AFB9204008FA782;
 					};
@@ -211,10 +208,12 @@
 			);
 			inputPaths = (
 				"${SRCROOT}/Pods/Target Support Files/Pods-SpitcastSwift_Tests/Pods-SpitcastSwift_Tests-frameworks.sh",
+				"${BUILT_PRODUCTS_DIR}/Alamofire/Alamofire.framework",
 				"${BUILT_PRODUCTS_DIR}/SpitcastSwift/SpitcastSwift.framework",
 			);
 			name = "[CP] Embed Pods Frameworks";
 			outputPaths = (
+				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/Alamofire.framework",
 				"${TARGET_BUILD_DIR}/${FRAMEWORKS_FOLDER_PATH}/SpitcastSwift.framework",
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -339,6 +338,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 9B49B4F7167C1528990F19A8 /* Pods-SpitcastSwift_Tests.debug.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = C8DMG6E92N;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",
@@ -361,6 +361,7 @@
 			isa = XCBuildConfiguration;
 			baseConfigurationReference = 13B4649DDA71DB2F4FCEA54A /* Pods-SpitcastSwift_Tests.release.xcconfig */;
 			buildSettings = {
+				DEVELOPMENT_TEAM = C8DMG6E92N;
 				FRAMEWORK_SEARCH_PATHS = (
 					"$(SDKROOT)/Developer/Library/Frameworks",
 					"$(inherited)",

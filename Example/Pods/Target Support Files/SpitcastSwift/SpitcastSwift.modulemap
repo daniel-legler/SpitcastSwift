@@ -1,0 +1,6 @@
+framework module SpitcastSwift {
+  umbrella header "SpitcastSwift-umbrella.h"
+
+  export *
+  module * { export * }
+}
