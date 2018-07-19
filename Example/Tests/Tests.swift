@@ -3,25 +3,32 @@ import SpitcastSwift
 
 class Tests: XCTestCase {
     
-    override func setUp() {
-        super.setUp()
-    }
-    
-    override func tearDown() {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-        super.tearDown()
-    }
-    
-    func testExample() {
-        // This is an example of a functional test case.
-        XCTAssert(true, "Pass")
-    }
-    
-    func testPerformanceExample() {
-        // This is an example of a performance test case.
-        self.measure() {
-            // Put the code you want to measure the time of here.
+    func testForecastEndpoint() {
+        let expectation = XCTestExpectation(description: "API Call to Return Something")
+        SpitcastAPI.spotForecast(id: SpotData.LosAngeles.ManhattanBeach.id) { (result) in
+            result.withValue({ (reports) in
+                print(reports.first!.shape)
+            })
+            result.withError({ (error) in
+                print(error.localizedDescription)
+            })
+            expectation.fulfill()
         }
+        wait(for: [expectation], timeout: 5.0)
     }
     
+    func testAllSpotsEndpoint() {
+        let expectation = XCTestExpectation(description: "API Call to Return Something")
+        SpitcastAPI.allSpots() { (result) in
+            result.withValue({ (reports) in
+                print(reports.first!.name)
+            })
+            result.withError({ (error) in
+                print(error.localizedDescription)
+            })
+            expectation.fulfill()
+        }
+        wait(for: [expectation], timeout: 5.0)
+    }
+
 }

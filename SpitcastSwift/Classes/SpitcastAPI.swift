@@ -3,21 +3,41 @@ import Alamofire
 
 final public class SpitcastAPI {
     
-    // MARK: - Spot Endpoint
+    // MARK: - Public API Functions
     
-    public static func allSpots(_ completion: @escaping (Result<[SCSurfSpot]>) -> Void) {
+    public typealias SCResponse<T> = (Result<[T]>) -> Void
+    
+    public static func allSpots(_ completion: @escaping SCResponse<SCSurfSpot>) {
         fetch(endpoint: SCSpotEndpoint.all,
-              serializer: DataRequest.allSpotsSerializer(),
+              serializer: DataRequest.spitcastSerializer(),
               completion)
     }
 
-    public static func forecast(spotId: Int, _ completion: @escaping (Result<[SCForecast]>) -> Void) {
-        fetch(endpoint: SCSpotEndpoint.forecast(spotId: spotId),
+    public static func countySpots(_ county: String, _ completion: @escaping SCResponse<SCSurfSpot>) {
+        fetch(endpoint: SCCountyEndpoint.spots(county: county),
+              serializer: DataRequest.spitcastSerializer(),
+              completion)
+    }
+
+    public static func spotForecast(id: Int, _ completion: @escaping SCResponse<SCForecast>) {
+        fetch(endpoint: SCSpotEndpoint.forecast(spotId: id),
               serializer: DataRequest.spitcastSerializer(),
               completion)
     }
     
-    // MARK: - County Endpoint
+    public static func countyTide(_ county: String, _ completion: @escaping SCResponse<SCTide>) {
+        fetch(endpoint: SCCountyEndpoint.tide(county: county),
+              serializer: DataRequest.spitcastSerializer(),
+              completion)
+    }
+    
+    public static func countyWind(_ county: String, _ completion: @escaping SCResponse<SCWind>) {
+        fetch(endpoint: SCCountyEndpoint.wind(county: county),
+              serializer: DataRequest.spitcastSerializer(),
+              completion)
+    }
+    
+    // MARK: - Internal Request Formation
     
     private static func fetch<T: DataResponseSerializerProtocol>(endpoint: Endpoint,
                               serializer: T,
@@ -32,8 +52,5 @@ final public class SpitcastAPI {
         } catch {
             completion(.failure(error))
         }
-
     }
 }
-
-

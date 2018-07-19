@@ -1,6 +1,5 @@
 # SpitcastSwift
 
-[![CI Status](https://img.shields.io/travis/dlegler93@ucla.edu/SpitcastSwift.svg?style=flat)](https://travis-ci.org/dlegler93@ucla.edu/SpitcastSwift)
 [![Version](https://img.shields.io/cocoapods/v/SpitcastSwift.svg?style=flat)](https://cocoapods.org/pods/SpitcastSwift)
 [![License](https://img.shields.io/cocoapods/l/SpitcastSwift.svg?style=flat)](https://cocoapods.org/pods/SpitcastSwift)
 [![Platform](https://img.shields.io/cocoapods/p/SpitcastSwift.svg?style=flat)](https://cocoapods.org/pods/SpitcastSwift)
@@ -22,7 +21,9 @@ pod 'SpitcastSwift'
 
 ## Author
 
-dlegler93@ucla.edu, dlegler@rokasecurity.com
+Daniel Legler
+
+All content and surf reporting obtained by use of this library is owned by [Spitcast](http://www.spitcast.com).
 
 ## License
 
