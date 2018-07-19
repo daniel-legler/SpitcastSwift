@@ -1,22 +1,23 @@
 {
   "name": "SpitcastSwift",
-  "version": "0.1.0",
-  "summary": "A short description of SpitcastSwift.",
-  "description": "TODO: Add long description of the pod here.",
-  "homepage": "https://github.com/dlegler93@ucla.edu/SpitcastSwift",
+  "version": "1.0.0",
+  "summary": "Swift wrapper for the Spitcast API.",
+  "description": "This unofficial library is meant to expose most of the core forecasting endpoints of the open Spitcast API in Swift.",
+  "homepage": "https://github.com/daniel-legler/SpitcastSwift",
   "license": {
     "type": "MIT",
     "file": "LICENSE"
   },
   "authors": {
-    "dlegler93@ucla.edu": "dlegler@rokasecurity.com"
+    "Daniel Legler": "daniel.legler@gmail.com"
   },
   "source": {
-    "git": "https://github.com/dlegler93@ucla.edu/SpitcastSwift.git",
-    "tag": "0.1.0"
+    "git": "https://github.com/daniel-legler/SpitcastSwift.git",
+    "tag": "1.0.0"
   },
+  "social_media_url": "https://twitter.com/_dlegler",
   "platforms": {
-    "ios": "8.0"
+    "ios": "10.0"
   },
   "source_files": "SpitcastSwift/Classes/**/*",
   "dependencies": {
