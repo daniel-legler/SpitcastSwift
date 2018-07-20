@@ -1,6 +1,7 @@
 import Foundation
 
-public struct SCForecast: Codable {
+public struct SCForecast: SCModel {
+    static var dateFormatter: DateFormatter = .gmt()
     
     public struct SCShapeDetail: Codable {
         public var swell: String

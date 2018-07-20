@@ -1,12 +1,12 @@
 import Foundation
 
-public struct SCWind: Codable {
+public struct SCWind: SCModel {
     public var date: Date
     public var county: String
     public var speedKts: Double
     public var speedMph: Double
     public var directionDegrees: Double
-    public var cardinalDir: String
+    public var cardinalDirection: String
     
     private enum CodingKeys: String, CodingKey {
         case date = "gmt"
@@ -14,6 +14,9 @@ public struct SCWind: Codable {
         case speedKts = "speed_kts"
         case speedMph = "speed_mph"
         case directionDegrees = "direction_degrees"
-        case cardinalDir = "direction_text"
+        case cardinalDirection = "direction_text"
     }
+    
+    static var dateFormatter: DateFormatter = .gmt()
+
 }

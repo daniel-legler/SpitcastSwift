@@ -24,7 +24,7 @@ extension SCCountyEndpoint: Endpoint {
         }
     }
     
-    func sanitize(_ county: String) -> String {
+    private func sanitize(_ county: String) -> String {
         return county.lowercased().replacingOccurrences(of: " ", with: "-")
     }
 }

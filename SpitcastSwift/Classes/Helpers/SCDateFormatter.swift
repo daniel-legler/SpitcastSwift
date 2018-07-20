@@ -1,13 +1,16 @@
 import Foundation
 
-class SCDateFormatter: DateFormatter {
-    override init() {
-        super.init()
-        self.dateFormat = "yyyy-M-d H"
-        self.timeZone = TimeZone(secondsFromGMT: 0)
+extension DateFormatter {
+    static func gmt() -> DateFormatter {
+        let df = DateFormatter()
+        df.dateFormat = "yyyy-M-d H"
+        df.timeZone = TimeZone(secondsFromGMT: 0)
+        return df
     }
     
-    required init?(coder aDecoder: NSCoder) {
-        fatalError("init(coder:) has not been implemented")
+    static func recorded() -> DateFormatter {
+        let df = DateFormatter()
+        df.dateFormat = "'Y'yyyy 'M'M 'D'd 'H'H"
+        return df
     }
 }

@@ -1,5 +1,6 @@
 import Foundation
-public struct SCSurfSpot: Codable {
+
+public struct SCSurfSpot: SCModel {
     public var spotId: Int
     public var name: String
     public var county: String
@@ -13,4 +14,6 @@ public struct SCSurfSpot: Codable {
         case spotId = "spot_id"
         case name = "spot_name"
     }
+    
+    static var dateFormatter: DateFormatter = .gmt()
 }
