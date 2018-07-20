@@ -1,7 +1,4 @@
-#
 # Be sure to run `pod lib lint SpitcastSwift.podspec' to ensure this is a
-# valid spec before submitting.
-
 Pod::Spec.new do |s|
   s.name             = 'SpitcastSwift'
   s.version          = '1.0.0'
@@ -15,6 +12,7 @@ This unofficial library is meant to expose most of the core forecasting endpoint
   s.source           = { :git => 'https://github.com/daniel-legler/SpitcastSwift.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/_dlegler'
   s.ios.deployment_target = '10.0'
+  s.swift_version = '4.1'
   s.source_files = 'SpitcastSwift/Classes/**/*'
   s.dependency 'Alamofire'
 end
