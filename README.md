@@ -4,11 +4,28 @@
 [![License](https://img.shields.io/cocoapods/l/SpitcastSwift.svg?style=flat)](https://cocoapods.org/pods/SpitcastSwift)
 [![Platform](https://img.shields.io/cocoapods/p/SpitcastSwift.svg?style=flat)](https://cocoapods.org/pods/SpitcastSwift)
 
-## Example
+## Usage
 
-To run the example project, clone the repo, and run `pod install` from the Example directory first.
+All available endpoints are exposed via the `SpitcastAPI` class, with the following usage:
 
-## Requirements
+```
+SpitcastAPI.allSpots() { (result) in
+  // Do something with spot information or handle error
+}
+```
+
+There is a convenience class called `SpotData` which contains names and `SpotId` values used by Spitcast to identify particular surf spots:
+
+```
+SpitcastAPI.spotForecast(id: SpotData.LosAngeles.ManhattanBeach.id) { (result) in
+    result.withValue({ (reports) in
+      // Handle surf report information
+    })
+    result.withError({ (error) in
+      // Handle error
+    })
+}
+```
 
 ## Installation
 
@@ -18,6 +35,23 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'SpitcastSwift'
 ```
+If being used in an iOS app, you will need to add this snipped to your Info.plist file to comply with App Transport Security:
+```
+<key>NSAppTransportSecurity</key>
+<dict>
+    <key>NSExceptionDomains</key>
+        <dict>
+            <key>spitcast.com</key>
+            <dict>
+            <key>NSIncludesSubdomains</key>
+            <true/>
+            <key>NSExceptionAllowsInsecureHTTPLoads</key>
+            <true/>
+        </dict>
+    </dict>
+</dict>
+```
+Note that `NSExceptionAllowsInsecureHTTPLoads` must be true because Spitcast does not support HTTPS.
 
 ## Author
 
