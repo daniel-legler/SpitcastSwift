@@ -1,34 +1,60 @@
 import XCTest
 import SpitcastSwift
+import Alamofire
 
 class Tests: XCTestCase {
     
-    func testForecastEndpoint() {
-        let expectation = XCTestExpectation(description: "API Call to Return Something")
-        SpitcastAPI.spotForecast(id: SpotData.LosAngeles.ManhattanBeach.id) { (result) in
-            result.withValue({ (reports) in
-                print(reports.first!.shape)
-            })
-            result.withError({ (error) in
-                print(error.localizedDescription)
-            })
-            expectation.fulfill()
-        }
-        wait(for: [expectation], timeout: 5.0)
+    var expectation: XCTestExpectation!
+    
+    override func setUp() {
+        expectation = XCTestExpectation()
     }
     
-    func testAllSpotsEndpoint() {
-        let expectation = XCTestExpectation(description: "API Call to Return Something")
-        SpitcastAPI.allSpots() { (result) in
-            result.withValue({ (reports) in
-                print(reports.first!.name)
-            })
-            result.withError({ (error) in
-                print(error.localizedDescription)
-            })
-            expectation.fulfill()
+    func evaluate<T>(_ result: (Result<[T]>)) {
+        result.withValue { (value) in
+            print("API Returned: \(value)")
+            self.expectation.fulfill()
         }
+        result.withError { (error) in
+            print(error.localizedDescription)
+        }
+    }
+    
+    func testAllSpots() {
+        SpitcastAPI.allSpots(evaluate)
         wait(for: [expectation], timeout: 5.0)
     }
 
+    func testSpotForecast() {
+        SpitcastAPI.spotForecast(id: Spots.LosAngeles.ManhattanBeach.id, evaluate)
+        wait(for: [expectation], timeout: 5.0)
+    }
+    
+    func testSpotsNearby() {
+        SpitcastAPI.spotsNearby(lat: 34.0093515, lon: -118.49746820000001, evaluate)
+        wait(for: [expectation], timeout: 5.0)
+    }
+    
+    func testNeighboringSpots() {
+        SpitcastAPI.neigboringSpots(spotId: Spots.Marin.ThePatch.id, evaluate)
+    }
+    
+    func testSpotsInCounty() {
+        SpitcastAPI.spotsInCounty(Counties.DelNorte, evaluate)
+        wait(for: [expectation], timeout: 5.0)
+    }
+    
+    func testTideReport() {
+        SpitcastAPI.tideReport(county: Counties.Sonoma, evaluate)
+        wait(for: [expectation], timeout: 5.0)
+    }
+
+    func testWindReport() {
+        SpitcastAPI.windReport(county: Counties.Humboldt, evaluate)
+    }
+    
+    func testWaterTemperature() {
+        SpitcastAPI.waterTemperature(county: Counties.Ventura, evaluate)
+        wait(for: [expectation], timeout: 5.0)
+    }
 }

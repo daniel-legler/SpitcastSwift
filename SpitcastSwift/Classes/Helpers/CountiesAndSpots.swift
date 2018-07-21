@@ -1,6 +1,6 @@
 import Foundation
 
-public struct County {
+public struct Counties {
     public static let DelNorte = "Del Norte"
     public static let Humboldt = "Humboldt"
     public static let Sonoma = "Sonoma"
@@ -17,7 +17,7 @@ public struct County {
     public static let SanDiego = "San Diego"
 }
 
-public struct SpotData {
+public struct Spots {
     public struct Monterey {
         public struct ZmudowskiStateBeach {
             public static let name = "Zmudowski State Beach"

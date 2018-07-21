@@ -32,7 +32,7 @@
 		8DD67B8A2101528A0068239B /* SCWind.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD67B892101528A0068239B /* SCWind.swift */; };
 		8DD67B8C210202FE0068239B /* SCTemperature.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD67B8B210202FE0068239B /* SCTemperature.swift */; };
 		8DD67B8E2102057C0068239B /* SCModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8DD67B8D2102057C0068239B /* SCModel.swift */; };
-		9DD1FACC3116E3D31BDF757B72701194 /* SpotData.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BEE34A3E86A2C7CCF17467B4563527 /* SpotData.swift */; };
+		9DD1FACC3116E3D31BDF757B72701194 /* CountiesAndSpots.swift in Sources */ = {isa = PBXBuildFile; fileRef = 23BEE34A3E86A2C7CCF17467B4563527 /* CountiesAndSpots.swift */; };
 		9ED2BB2981896E0A39EFA365503F58CE /* AFError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 4AF006B0AD5765D1BFA8253C2DCBB126 /* AFError.swift */; };
 		A2A6F71B727312BD45CC7A4AAD7B0AB7 /* NetworkReachabilityManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = E5A8AA5F9EDED0A0BDDE7E830BF4AEE0 /* NetworkReachabilityManager.swift */; };
 		A9EEEA7477981DEEBC72432DE9990A4B /* Alamofire-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = D1F50F37DFB6DC0B7B9D8C373E5A3EAE /* Alamofire-dummy.m */; };
@@ -89,7 +89,7 @@
 		210971763CB2FC0DC4E378271A37BE32 /* Alamofire.modulemap */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.module; path = Alamofire.modulemap; sourceTree = "<group>"; };
 		210B8CB7DD3F6E20258CC82F52B3669B /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		223B34F7335DE12864E750D64D1DA823 /* SCSpotEndpoint.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SCSpotEndpoint.swift; sourceTree = "<group>"; };
-		23BEE34A3E86A2C7CCF17467B4563527 /* SpotData.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SpotData.swift; sourceTree = "<group>"; };
+		23BEE34A3E86A2C7CCF17467B4563527 /* CountiesAndSpots.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CountiesAndSpots.swift; sourceTree = "<group>"; };
 		249B8F63D4B03F8AF93CA7EB61E401F5 /* SCSurfSpot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SCSurfSpot.swift; sourceTree = "<group>"; };
 		32B030D27CAC730C5EB0F22390645310 /* ServerTrustPolicy.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = ServerTrustPolicy.swift; path = Source/ServerTrustPolicy.swift; sourceTree = "<group>"; };
 		33A04B5D27E86AF4B84D95E21CF3F452 /* Alamofire.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = Alamofire.xcconfig; sourceTree = "<group>"; };
@@ -287,7 +287,7 @@
 		923E4EB1ACA2B2C384D5056CDD2F5B9D /* Helpers */ = {
 			isa = PBXGroup;
 			children = (
-				23BEE34A3E86A2C7CCF17467B4563527 /* SpotData.swift */,
+				23BEE34A3E86A2C7CCF17467B4563527 /* CountiesAndSpots.swift */,
 				1310246C491AF88AFFDA912D14AA58D5 /* SCDateFormatter.swift */,
 				B968EF02985700F90C8D0BD52391F7BC /* SCResponseSerializer.swift */,
 			);
@@ -515,7 +515,7 @@
 				20723EF764B7B5BE6E5E4C6AD136D315 /* SCTide.swift in Sources */,
 				DE1227F86239BFD2878D9D1B3CC202B1 /* SpitcastAPI.swift in Sources */,
 				66E6C8EC9C917235966920CA42EF846E /* SpitcastSwift-dummy.m in Sources */,
-				9DD1FACC3116E3D31BDF757B72701194 /* SpotData.swift in Sources */,
+				9DD1FACC3116E3D31BDF757B72701194 /* CountiesAndSpots.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

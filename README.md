@@ -10,14 +10,14 @@ All available endpoints are exposed via the `SpitcastAPI` class, with the follow
 
 ```
 SpitcastAPI.allSpots() { (result) in
-  // Do something with spot information or handle error
+  // Handle result
 }
 ```
 
-There is a convenience class called `SpotData` which contains names and `SpotId` values used by Spitcast to identify particular surf spots:
+There are convenience structs (`Counties`, `Spots`) which contain names and `SpotId` values used by Spitcast to identify particular surf spots:
 
 ```
-SpitcastAPI.spotForecast(id: SpotData.LosAngeles.ManhattanBeach.id) { (result) in
+SpitcastAPI.spotForecast(id: Spots.LosAngeles.ManhattanBeach.id) { (result) in
     result.withValue({ (reports) in
       // Handle surf report information
     })
@@ -26,6 +26,8 @@ SpitcastAPI.spotForecast(id: SpotData.LosAngeles.ManhattanBeach.id) { (result) i
     })
 }
 ```
+
+Please see the included tests that have examples of each available API call.
 
 ## Installation
 
