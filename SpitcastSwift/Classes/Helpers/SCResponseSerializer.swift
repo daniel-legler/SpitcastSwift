@@ -11,8 +11,12 @@ extension DataRequest {
             do {
                 let decoder = JSONDecoder()
                 decoder.dateDecodingStrategy = .formatted(T.dateFormatter)
-                let objects = try decoder.decode([T].self, from: data)
-                return .success(objects)
+                if let objects = try? decoder.decode([T].self, from: data) {
+                    return .success(objects)
+                } else {
+                    let object = try decoder.decode(T.self, from: data)
+                    return .success([object])
+                }
             } catch {
                 return .failure(AFError.responseSerializationFailed(reason: .jsonSerializationFailed(error: error)))
             }

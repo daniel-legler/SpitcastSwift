@@ -25,7 +25,7 @@ extension SCSpotEndpoint: Endpoint {
             return "neighbors/\(spotId)"
         }
     }
-    
+
     func url() throws -> URL {
         let url = URL(string: path, relativeTo: baseUrl)!
 

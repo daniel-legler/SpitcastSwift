@@ -51,6 +51,7 @@ class Tests: XCTestCase {
 
     func testWindReport() {
         SpitcastAPI.windReport(county: Counties.Humboldt, evaluate)
+        wait(for: [expectation], timeout: 5.0)
     }
     
     func testWaterTemperature() {
