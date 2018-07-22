@@ -37,7 +37,7 @@ it, simply add the following line to your Podfile:
 ```ruby
 pod 'SpitcastSwift'
 ```
-If being used in an iOS app, you will need to add this snipped to your Info.plist file to comply with App Transport Security:
+If being used in an iOS app, you will need to add this snippet to your Info.plist file to comply with App Transport Security:
 ```
 <key>NSAppTransportSecurity</key>
 <dict>

@@ -1,4 +1,3 @@
-# Be sure to run `pod lib lint SpitcastSwift.podspec' to ensure this is a
 Pod::Spec.new do |s|
   s.name             = 'SpitcastSwift'
   s.version          = '0.0.1'
