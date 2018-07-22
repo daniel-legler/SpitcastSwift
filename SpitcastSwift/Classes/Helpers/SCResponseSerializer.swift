@@ -2,7 +2,7 @@ import Foundation
 import Alamofire
 
 extension DataRequest {
-    static func spitcastSerializer<T: SCModel>() -> DataResponseSerializer<[T]> {
+    static func spitcast<T: SCModel>() -> DataResponseSerializer<[T]> {
         return DataResponseSerializer { (_, _, data, error) -> Result<[T]> in
             guard let data = data else {
                 return .failure(AFError.responseSerializationFailed(reason: .inputDataNil))

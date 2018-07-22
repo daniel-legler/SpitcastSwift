@@ -33,10 +33,9 @@ extension SCSpotEndpoint: Endpoint {
         case .all, .forecast, .neighbors:
             return url
         case .nearby(let lat, let lon):
-            let items = [ URLQueryItem(name: "latitude", value: String(lat)),
-                          URLQueryItem(name: "longitude", value: String(lon))]
             var components = URLComponents(string: url.absoluteString)
-            components?.queryItems = items
+            components?.queryItems = [ URLQueryItem(name: "latitude", value: String(lat)),
+                                       URLQueryItem(name: "longitude", value: String(lon))]
             return (try components?.asURL()) ?? url
         }
     }

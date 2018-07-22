@@ -1,6 +1,6 @@
 import Foundation
 
-public struct SCSurfSpot: SCModel {
+public struct SCSurfSpot: SCModel {    
     public var spotId: Int
     public var name: String
     public var county: String

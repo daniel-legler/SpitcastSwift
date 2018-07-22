@@ -31,7 +31,7 @@ class Tests: XCTestCase {
     }
     
     func testSpotsNearby() {
-        SpitcastAPI.spotsNearby(lat: 34.0093515, lon: -118.49746820000001, evaluate)
+        SpitcastAPI.spotsNear(lat: 34.0093515, lon: -118.49746820000001, evaluate)
         wait(for: [expectation], timeout: 5.0)
     }
     
