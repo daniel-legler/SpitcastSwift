@@ -4,6 +4,7 @@ public struct Counties {
     public static let DelNorte = "Del Norte"
     public static let Humboldt = "Humboldt"
     public static let Sonoma = "Sonoma"
+    public static let Mendocino = "Mendocino"
     public static let Marin = "Marin"
     public static let SanFrancisco = "San Francisco"
     public static let SanMateo = "San Mateo"

@@ -7,9 +7,12 @@ final public class SpitcastAPI {
     
     public typealias SCResult<T> = (Result<[T]>) -> Void
     
-    public static func allSpots(_ completion: @escaping SCResult<SCSurfSpot>) {
+    // The Spitcast API provides ONLY wind/tide (not swell) information for these counties:
+    //  - Mendocino, Humboldt, Del Norte, Sonoma
+    public static func allSpots(includeUnsupportedCounties: Bool = false,
+                                _ completion: @escaping SCResult<SCSurfSpot>) {
         fetch(endpoint: SCSpotEndpoint.all,
-              serializer: DataRequest.spitcast(),
+              serializer: includeUnsupportedCounties ? DataRequest.spitcast() : DataRequest.forecastableSpots(),
               completion)
     }
 
