@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SpitcastSwift'
-  s.version          = '0.0.3'
+  s.version          = '0.0.4'
   s.summary          = 'Swift wrapper for the Spitcast API.'
   s.description      = <<-DESC
 This unofficial library is meant to expose most of the core forecasting endpoints of the open Spitcast API in Swift.
