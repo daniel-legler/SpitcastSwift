@@ -24,6 +24,11 @@ class Tests: XCTestCase {
         SpitcastAPI.allSpots(evaluate)
         wait(for: [expectation], timeout: 5.0)
     }
+    
+    func testForecastableSpots() {
+        SpitcastAPI.forecastableSpots(evaluate)
+        wait(for: [expectation], timeout: 5.0)
+    }
 
     func testSpotForecast() {
         SpitcastAPI.spotForecast(id: Spots.LosAngeles.ManhattanBeach.id, evaluate)

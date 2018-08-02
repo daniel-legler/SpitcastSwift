@@ -24,6 +24,7 @@
 		66E6C8EC9C917235966920CA42EF846E /* SpitcastSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 09847A2805DCD26BDEBA566A9C6DC163 /* SpitcastSwift-dummy.m */; };
 		6C8E1A8EA2839B085380D3C199CE815E /* SCCountyEndpoint.swift in Sources */ = {isa = PBXBuildFile; fileRef = A29C5FA59FFDA04648464FB8624D2BA1 /* SCCountyEndpoint.swift */; };
 		72E600AFEBD54DD647C3D0C11DE69E4A /* SCForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = AFEA307FBFA9C14AAC80E8F5A413B676 /* SCForecast.swift */; };
+		742BB9EE21138D3200404630 /* ForecastableSpotIds.swift in Sources */ = {isa = PBXBuildFile; fileRef = 742BB9EC21138CDA00404630 /* ForecastableSpotIds.swift */; };
 		744E739F2104245700C2EF0C /* SCNearbySpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 744E739E2104245700C2EF0C /* SCNearbySpot.swift */; };
 		7B5FE28C7EA4122B0598738E54DBEBD8 /* SessionDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 195D73DD9EF275A3C56569E2B1CA8026 /* SessionDelegate.swift */; };
 		7D8CC01E8C9EFFF9F4D65406CDE0AB66 /* Result.swift in Sources */ = {isa = PBXBuildFile; fileRef = 3D60BC9955B4F7FFA62D7440CB385C11 /* Result.swift */; };
@@ -111,6 +112,7 @@
 		66A46F517F0AF7E85A16D723F6406896 /* Notifications.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; name = Notifications.swift; path = Source/Notifications.swift; sourceTree = "<group>"; };
 		6EACD38C8636E9D3B5A812DB2F48A8C8 /* SpitcastSwift.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = SpitcastSwift.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		706C7AFFE37BA158C3553250F4B5FAED /* Alamofire.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Alamofire.framework; sourceTree = BUILT_PRODUCTS_DIR; };
+		742BB9EC21138CDA00404630 /* ForecastableSpotIds.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ForecastableSpotIds.swift; sourceTree = "<group>"; };
 		744E739E2104245700C2EF0C /* SCNearbySpot.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNearbySpot.swift; sourceTree = "<group>"; };
 		75F2B486FF874CA5F658B763F70E4598 /* Pods-SpitcastSwift_Tests.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; path = "Pods-SpitcastSwift_Tests.release.xcconfig"; sourceTree = "<group>"; };
 		76414921F163FA1B19B6C7B95FB7CCF3 /* Pods-SpitcastSwift_Tests-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "Pods-SpitcastSwift_Tests-umbrella.h"; sourceTree = "<group>"; };
@@ -292,6 +294,7 @@
 				23BEE34A3E86A2C7CCF17467B4563527 /* CountiesAndSpots.swift */,
 				1310246C491AF88AFFDA912D14AA58D5 /* SCDateFormatter.swift */,
 				B968EF02985700F90C8D0BD52391F7BC /* SCResponseSerializer.swift */,
+				742BB9EC21138CDA00404630 /* ForecastableSpotIds.swift */,
 			);
 			name = Helpers;
 			path = SpitcastSwift/Classes/Helpers;
@@ -510,6 +513,7 @@
 				8DD67B8A2101528A0068239B /* SCWind.swift in Sources */,
 				6C8E1A8EA2839B085380D3C199CE815E /* SCCountyEndpoint.swift in Sources */,
 				8DD67B8E2102057C0068239B /* SCModel.swift in Sources */,
+				742BB9EE21138D3200404630 /* ForecastableSpotIds.swift in Sources */,
 				527BA3D3BBFA6D07484C924CEBF52D8B /* SCDateFormatter.swift in Sources */,
 				72E600AFEBD54DD647C3D0C11DE69E4A /* SCForecast.swift in Sources */,
 				60C23EA3ADB9220A04959C19B6E45CD3 /* SCResponseSerializer.swift in Sources */,
