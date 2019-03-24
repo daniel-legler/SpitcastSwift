@@ -1,19 +1,19 @@
 import Foundation
 
-public struct SCSurfSpot: SCModel {    
-    public var spotId: Int
-    public var name: String
-    public var county: String
-    public var latitude: Double
-    public var longitude: Double
-    
-    private enum CodingKeys: String, CodingKey {
-        case county = "county_name"
-        case latitude
-        case longitude
-        case spotId = "spot_id"
-        case name = "spot_name"
-    }
-    
-    static var dateFormatter: DateFormatter = .gmt()
+public struct SCSurfSpot: SCModel {
+  public var spotId: Int
+  public var name: String
+  public var county: String
+  public var latitude: Double
+  public var longitude: Double
+
+  private enum CodingKeys: String, CodingKey {
+    case county = "county_name"
+    case latitude
+    case longitude
+    case spotId = "spot_id"
+    case name = "spot_name"
+  }
+
+  static var dateFormatter: DateFormatter = .gmt()
 }
