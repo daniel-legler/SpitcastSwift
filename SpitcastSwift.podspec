@@ -1,6 +1,6 @@
 Pod::Spec.new do |s|
   s.name             = 'SpitcastSwift'
-  s.version          = '0.0.5'
+  s.version          = '0.0.7'
   s.summary          = 'Swift wrapper for the Spitcast API.'
   s.description      = <<-DESC
 This unofficial library is meant to expose most of the core forecasting endpoints of the open Spitcast API in Swift.
@@ -12,6 +12,5 @@ This unofficial library is meant to expose most of the core forecasting endpoint
   s.social_media_url = 'https://twitter.com/_dlegler'
   s.ios.deployment_target = '10.0'
   s.source_files = 'SpitcastSwift/Classes/**/*'
-  s.swift_version = '4.2'
   s.dependency 'Alamofire'
 end
