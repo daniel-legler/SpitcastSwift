@@ -11,7 +11,7 @@ This unofficial library is meant to expose most of the core forecasting endpoint
   s.source           = { :git => 'https://github.com/daniel-legler/SpitcastSwift.git', :tag => s.version.to_s }
   s.social_media_url = 'https://twitter.com/_dlegler'
   s.ios.deployment_target = '10.0'
-  s.swift_version = '4.2'
   s.source_files = 'SpitcastSwift/Classes/**/*'
+  s.swift_version = '4.2'
   s.dependency 'Alamofire'
 end

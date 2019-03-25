@@ -1,6 +1,6 @@
 PODS:
   - Alamofire (4.8.1)
-  - SpitcastSwift (0.0.4):
+  - SpitcastSwift (0.0.5):
     - Alamofire
 
 DEPENDENCIES:
@@ -16,7 +16,7 @@ EXTERNAL SOURCES:
 
 SPEC CHECKSUMS:
   Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
-  SpitcastSwift: 8b44051a50e01628c19951a478f8a94cc488698f
+  SpitcastSwift: a2d9ad20f8d3f345ce9c94515708346eb2897ed1
 
 PODFILE CHECKSUM: 828939b1af3f27354549f5ab47ad1277fea5ed85
 
