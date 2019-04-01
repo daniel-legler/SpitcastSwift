@@ -9,7 +9,8 @@ protocol Endpoint {
 
 extension Endpoint {
   func url() -> URL? {
-    return URL(string: path, relativeTo: baseUrl)
+    let sanitizedPath = path.sanitized()
+    return URL(string: sanitizedPath, relativeTo: baseUrl)
   }
 
   func request() -> URLRequest? {
@@ -19,5 +20,11 @@ extension Endpoint {
     var request = URLRequest(url: requestUrl)
     request.httpMethod = "GET"
     return request
+  }
+}
+
+extension String {
+  public func sanitized() -> String {
+    return self.lowercased().replacingOccurrences(of: " ", with: "-")
   }
 }

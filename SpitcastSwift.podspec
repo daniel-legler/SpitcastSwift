@@ -12,5 +12,4 @@ This unofficial library is meant to expose most of the core forecasting endpoint
   s.social_media_url = 'https://twitter.com/_dlegler'
   s.ios.deployment_target = '10.0'
   s.source_files = 'SpitcastSwift/Classes/**/*'
-  s.dependency 'Alamofire'
 end

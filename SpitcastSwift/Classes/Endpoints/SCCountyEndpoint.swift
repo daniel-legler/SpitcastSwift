@@ -15,17 +15,13 @@ extension SCCountyEndpoint: Endpoint {
   var path: String {
     switch self {
     case let .spots(county):
-      return "spots/\(sanitize(county))"
+      return "spots/\(county)"
     case let .tide(county):
-      return "tide/\(sanitize(county))"
+      return "tide/\(county)"
     case let .waterTemperature(county):
-      return "water-temperature/\(sanitize(county))"
+      return "water-temperature/\(county)"
     case let .wind(county):
-      return "wind/\(sanitize(county))"
+      return "wind/\(county)"
     }
-  }
-
-  private func sanitize(_ county: String) -> String {
-    return county.lowercased().replacingOccurrences(of: " ", with: "-")
   }
 }
