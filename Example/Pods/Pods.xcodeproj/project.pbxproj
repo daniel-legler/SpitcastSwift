@@ -155,7 +155,8 @@
 				745752A52251958F00EDB03E /* SCNetworkManager.swift */,
 				BAEBC292DC257DA703C759F4B676971A /* Endpoints */,
 			);
-			path = Network;
+			name = Network;
+			path = SpitcastSwift/Classes/Network;
 			sourceTree = "<group>";
 		};
 		7BC9B64F4855BCD3FD8FE5D0384C1C80 /* Development Pods */ = {
