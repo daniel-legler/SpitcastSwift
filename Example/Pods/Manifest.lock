@@ -1,23 +1,16 @@
 PODS:
-  - Alamofire (4.8.1)
-  - SpitcastSwift (0.0.5):
-    - Alamofire
+  - SpitcastSwift (0.0.7)
 
 DEPENDENCIES:
   - SpitcastSwift (from `../`)
-
-SPEC REPOS:
-  https://github.com/cocoapods/specs.git:
-    - Alamofire
 
 EXTERNAL SOURCES:
   SpitcastSwift:
     :path: "../"
 
 SPEC CHECKSUMS:
-  Alamofire: 16ce2c353fb72865124ddae8a57c5942388f4f11
-  SpitcastSwift: a2d9ad20f8d3f345ce9c94515708346eb2897ed1
+  SpitcastSwift: 0c3ee35084868cbaf995555331912330751689d2
 
 PODFILE CHECKSUM: 828939b1af3f27354549f5ab47ad1277fea5ed85
 
-COCOAPODS: 1.5.3
+COCOAPODS: 1.6.1

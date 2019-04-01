@@ -1,4 +1,3 @@
-import Alamofire
 import Foundation
 
 enum SCSpotEndpoint {
@@ -26,7 +25,7 @@ extension SCSpotEndpoint: Endpoint {
     }
   }
 
-  func url() throws -> URL {
+  func url() -> URL? {
     let url = URL(string: path, relativeTo: baseUrl)!
 
     switch self {
@@ -36,7 +35,7 @@ extension SCSpotEndpoint: Endpoint {
       var components = URLComponents(string: url.absoluteString)
       components?.queryItems = [URLQueryItem(name: "latitude", value: String(lat)),
                                 URLQueryItem(name: "longitude", value: String(lon))]
-      return (try components?.asURL()) ?? url
+      return components?.url ?? url
     }
   }
 }

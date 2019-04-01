@@ -7,6 +7,7 @@ enum SCCountyEndpoint {
 }
 
 extension SCCountyEndpoint: Endpoint {
+
   var baseUrl: URL {
     return URL(string: "http://api.spitcast.com/api/county/")!
   }
