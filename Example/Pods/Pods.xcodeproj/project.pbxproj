@@ -18,6 +18,8 @@
 		6739C7A9AB484C8EF290E227BA6C7853 /* SCForecast.swift in Sources */ = {isa = PBXBuildFile; fileRef = DAC1DA5F409B3E240744441CAA99E647 /* SCForecast.swift */; };
 		6F87B72D3AEE282A63ABF47D7E699C90 /* SCSurfSpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 7B5D5339C26A55A73E458B109EE9766F /* SCSurfSpot.swift */; };
 		736F12595A51EFE12B2C3A285375BAC1 /* SpitcastSwift-dummy.m in Sources */ = {isa = PBXBuildFile; fileRef = 9219B64D6BAF84D90D3F1AD0C4C95730 /* SpitcastSwift-dummy.m */; };
+		745752A62251958F00EDB03E /* SCNetworkManager.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745752A52251958F00EDB03E /* SCNetworkManager.swift */; };
+		745752A8225195BC00EDB03E /* SCError.swift in Sources */ = {isa = PBXBuildFile; fileRef = 745752A7225195BC00EDB03E /* SCError.swift */; };
 		7C0A6D5D1AC1310F712053CB8310F150 /* SpitcastAPI.swift in Sources */ = {isa = PBXBuildFile; fileRef = 8526303E8AFEDAF63FD7624B18601B52 /* SpitcastAPI.swift */; };
 		8FBC0B81EDBE5E3E911503D600941CD9 /* Pods-SpitcastSwift_Tests-umbrella.h in Headers */ = {isa = PBXBuildFile; fileRef = 3385CB77558684B5ED64BF953CA45ACC /* Pods-SpitcastSwift_Tests-umbrella.h */; settings = {ATTRIBUTES = (Public, ); }; };
 		929C00F14F94E340DA65410F883FAC3C /* SCNearbySpot.swift in Sources */ = {isa = PBXBuildFile; fileRef = 5B0B838FA15674A846D95A58F159A9E7 /* SCNearbySpot.swift */; };
@@ -55,6 +57,8 @@
 		687B0D580A95B94E2B39AEDC935D317C /* SpitcastSwift-umbrella.h */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.c.h; path = "SpitcastSwift-umbrella.h"; sourceTree = "<group>"; };
 		698222B0E6EC049D84229D2D8DA10F3D /* Pods-SpitcastSwift_Tests-Info.plist */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.plist.xml; path = "Pods-SpitcastSwift_Tests-Info.plist"; sourceTree = "<group>"; };
 		6BECE679EC433837E5F53FC96EB15720 /* CountiesAndSpots.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = CountiesAndSpots.swift; sourceTree = "<group>"; };
+		745752A52251958F00EDB03E /* SCNetworkManager.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCNetworkManager.swift; sourceTree = "<group>"; };
+		745752A7225195BC00EDB03E /* SCError.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SCError.swift; sourceTree = "<group>"; };
 		78BD2A0B71E989AFFF33E35B407636F7 /* Pods_SpitcastSwift_Tests.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SpitcastSwift_Tests.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		7AC0187DF85D96CDD78B342C714F63A4 /* ForecastableSpotIds.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = ForecastableSpotIds.swift; sourceTree = "<group>"; };
 		7B5D5339C26A55A73E458B109EE9766F /* SCSurfSpot.swift */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = sourcecode.swift; path = SCSurfSpot.swift; sourceTree = "<group>"; };
@@ -134,7 +138,7 @@
 			isa = PBXGroup;
 			children = (
 				8526303E8AFEDAF63FD7624B18601B52 /* SpitcastAPI.swift */,
-				BAEBC292DC257DA703C759F4B676971A /* Endpoints */,
+				745752A42251956F00EDB03E /* Network */,
 				B0D8E45AD9BDBE51FDDD2F79F7818CC5 /* Helpers */,
 				0EAD8DA162B433DE5A2B4770CC9F3A65 /* Model */,
 				E10CAB9EFF5F5703869402412F417E51 /* Pod */,
@@ -142,6 +146,16 @@
 			);
 			name = SpitcastSwift;
 			path = ../..;
+			sourceTree = "<group>";
+		};
+		745752A42251956F00EDB03E /* Network */ = {
+			isa = PBXGroup;
+			children = (
+				745752A7225195BC00EDB03E /* SCError.swift */,
+				745752A52251958F00EDB03E /* SCNetworkManager.swift */,
+				BAEBC292DC257DA703C759F4B676971A /* Endpoints */,
+			);
+			path = Network;
 			sourceTree = "<group>";
 		};
 		7BC9B64F4855BCD3FD8FE5D0384C1C80 /* Development Pods */ = {
@@ -201,8 +215,7 @@
 				5F6BD5E702E6B001AB97AF90E00FD7B7 /* SCCountyEndpoint.swift */,
 				3F9AABC7D663964D026709E653CCAA62 /* SCSpotEndpoint.swift */,
 			);
-			name = Endpoints;
-			path = SpitcastSwift/Classes/Endpoints;
+			path = Endpoints;
 			sourceTree = "<group>";
 		};
 		CF1408CF629C7361332E53B88F7BD30C = {
@@ -357,12 +370,14 @@
 				BE9F7681BF87DD5A683A5DE7C10A2E26 /* SCCountyEndpoint.swift in Sources */,
 				1F5430A44458D1DE03CA85E98D112CA5 /* SCDateFormatter.swift in Sources */,
 				6739C7A9AB484C8EF290E227BA6C7853 /* SCForecast.swift in Sources */,
+				745752A8225195BC00EDB03E /* SCError.swift in Sources */,
 				96EAA7C01DC19838984954C27D69F5A5 /* SCModel.swift in Sources */,
 				929C00F14F94E340DA65410F883FAC3C /* SCNearbySpot.swift in Sources */,
 				361A0E20C3A2A11D13AE161F1C3C1D62 /* SCSpotEndpoint.swift in Sources */,
 				6F87B72D3AEE282A63ABF47D7E699C90 /* SCSurfSpot.swift in Sources */,
 				5809555A9E1370CCD96FDA390EABC518 /* SCTemperature.swift in Sources */,
 				2D071701705B1ED9BAA3CD531EA6DFDD /* SCTide.swift in Sources */,
+				745752A62251958F00EDB03E /* SCNetworkManager.swift in Sources */,
 				EBF94391840DEF52DD0127E3E9DA6534 /* SCWind.swift in Sources */,
 				7C0A6D5D1AC1310F712053CB8310F150 /* SpitcastAPI.swift in Sources */,
 				736F12595A51EFE12B2C3A285375BAC1 /* SpitcastSwift-dummy.m in Sources */,
