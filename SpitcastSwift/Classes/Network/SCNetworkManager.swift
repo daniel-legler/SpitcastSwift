@@ -2,9 +2,6 @@ import Foundation
 
 class SCNetworkManager {
   
-  /// The GCD queue that the network requests will operate on.
-  private let queue = DispatchQueue(label: UUID().uuidString, qos: .utility)
-  
   /// Performs a newtwork fetch request on the given endpoint.
   ///
   /// - Parameters:
@@ -14,24 +11,22 @@ class SCNetworkManager {
     endpoint: Endpoint,
     _ completion: @escaping (Result<[T], SCError>) -> Void)
   {
-    queue.async {
-      guard let request = endpoint.request() else {
-        completion(.failure(SCError.badRequest))
+    guard let request = endpoint.request() else {
+      completion(.failure(SCError.badRequest))
+      return
+    }
+    let task = URLSession.shared.dataTask(with: request) { (data, urlResponse, error) in
+      guard error == nil else {
+        completion(.failure(SCError.requestFailed(error!)))
         return
       }
-      let task = URLSession.shared.dataTask(with: request) { (data, urlResponse, error) in
-        guard error == nil else {
-          completion(.failure(SCError.requestFailed(error!)))
-          return
-        }
-        guard let data = data else {
-          completion(.failure(SCError.emptyResponse))
-          return
-        }
-        completion(self.serialize(data))
+      guard let data = data else {
+        completion(.failure(SCError.emptyResponse))
+        return
       }
-      task.resume()
+      completion(self.serialize(data))
     }
+    task.resume()
   }
   
   /// Serializes the provided data into the given SCModel.
